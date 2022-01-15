@@ -21,8 +21,6 @@ public class Main {
             String NameUser = scanner.nextLine();
             user.add(NameUser);
             System.out.println(NameUser);
-
-
         }
 
         ArrayList<String> user2 = new ArrayList<>();
@@ -39,6 +37,20 @@ public class Main {
         user3.addAll(user);
         user3.addAll(user2);
 
+        System.out.println(user3);
+        Iterator<String> stringIterator=user3.iterator();
+        while (stringIterator.hasNext()) {
+            System.out.println(stringIterator.next());
+            Sort sort= new Sort(user3=new ArrayList<>());
+            System.out.println(user3.size());
 
+
+
+        }
     }
+
+    private static List<String> fillList(String[] args) {
     }
+
+}
+
