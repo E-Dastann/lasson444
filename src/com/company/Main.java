@@ -39,8 +39,8 @@ public class Main {
             x++;
         }
 
-        //sideC.add(sideA.get(0));
-       // sideC.add(sideA.get(1));
+        sideC.add(sideA.get(0));
+        sideC.add(sideA.get(1));
 
 
         System.out.println(sideC);
