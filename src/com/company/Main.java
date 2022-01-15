@@ -10,47 +10,56 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        ArrayList<String> user = new ArrayList<>();
-        user.add(scanner.nextLine());
-        user.add("канат");
-        user.add("арстан");
-        user.add("кажарбек");
-        user.add("нурисам");
-        System.out.println(user);
-        while (user.size() <= 4) {
-            String NameUser = scanner.nextLine();
-            user.add(NameUser);
-            System.out.println(NameUser);
-        }
-
-        ArrayList<String> user2 = new ArrayList<>();
-        user2.add("нурай");
-        user2.add("нуржан");
-        user2.add("Айдай");
-        user2.add("Жанар");
-        user2.add("гулмайрам");
-        user2.add("нуржан");
-        System.out.println(user2);
+        ArrayList<String> sideA = new ArrayList<>();
+        ArrayList<String> sideB = new ArrayList<>();
+        ArrayList<String> sideC = new ArrayList<>();
 
 
-        ArrayList<String> user3 = new ArrayList();
-        user3.addAll(user);
-        user3.addAll(user2);
-
-        System.out.println(user3);
-        Iterator<String> stringIterator=user3.iterator();
-        while (stringIterator.hasNext()) {
-            System.out.println(stringIterator.next());
-            Sort sort= new Sort(user3=new ArrayList<>());
-            System.out.println(user3.size());
-
-
+        System.out.println();
+        for (int i = 0; i < 5; i++) {
+            sideA.add(scanner.nextLine());
 
         }
-    }
+        System.out.println(sideA);
 
-    private static List<String> fillList(String[] args) {
-    }
+        for (int i = 0; i < 5; i++) {
+            sideB.add(scanner.nextLine());
 
+        }
+        System.out.println(sideB);
+
+
+        Collections.reverse(sideB);
+
+        System.out.println(sideB);
+        Integer x=0;
+        while (sideC.size()<sideA.size()+sideB.size()){
+            sideC.add(sideA.get(x));
+            sideC.add(sideB.get(x));
+            x++;
+        }
+
+        //sideC.add(sideA.get(0));
+       // sideC.add(sideA.get(1));
+
+
+        System.out.println(sideC);
+        Collections.sort(sideC, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return o1.length()-o2.length();
+            }
+        });
+        System.out.println(sideC);
+
+
+    }
 }
+
+
+
+
+
+
+
 
